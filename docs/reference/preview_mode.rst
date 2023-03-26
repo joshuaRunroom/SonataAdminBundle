@@ -39,15 +39,13 @@ the fields configured to be shown in the show view.
 Overriding the preview template ``@SonataAdmin/CRUD/preview.html.twig`` can be done either
 globally through the template configuration for the key 'preview':
 
-.. configuration-block::
+.. code-block:: yaml
 
-    .. code-block:: yaml
+    # config/packages/sonata_admin.yaml
 
-        # config/packages/sonata_admin.yaml
-
-        sonata_admin:
-            templates:
-                preview: '@App/CRUD/preview.html.twig'
+    sonata_admin:
+        templates:
+            preview: '@App/CRUD/preview.html.twig'
 
 Or per admin entity by calling the ``setTemplate()`` method::
 

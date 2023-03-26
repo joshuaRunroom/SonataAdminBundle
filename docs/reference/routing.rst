@@ -218,16 +218,14 @@ as their controller, but this can be changed by altering the third argument when
 
 For example, lets change the Controller for our MediaAdmin class to ``App\Controller\MediaCRUDController``:
 
-.. configuration-block::
+.. code-block:: yaml
 
-    .. code-block:: yaml
+    # config/services.yaml
 
-        # config/services.yaml
-
-        app.admin.media:
-            class: App\Admin\MediaAdmin
-            tags:
-                - { name: sonata.admin, model_class: App\Entity\Page, controller: App\Controller\MediaCRUDController, manager_type: orm, label: 'Media' }
+    app.admin.media:
+        class: App\Admin\MediaAdmin
+        tags:
+            - { name: sonata.admin, model_class: App\Entity\Page, controller: App\Controller\MediaCRUDController, manager_type: orm, label: 'Media' }
 
 We now need to create our Controller, the easiest way is to extend the
 basic Sonata CRUD controller::
